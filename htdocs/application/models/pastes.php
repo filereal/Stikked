@@ -551,7 +551,10 @@ class Pastes extends CI_Model
 			// query
 			if($this->db->dbdriver == "postgre") {
 				$sql = "SELECT id, title, name, created, pid, lang, raw, hits FROM pastes WHERE private = 0 AND (title LIKE ? OR raw LIKE ?) ORDER BY hits DESC, created DESC LIMIT $amount OFFSET $page";
-			} else {
+			} 
+			else if ($root == "api/trending"){
+				$sql = "SELECT id, title, name, created, pid, lang, raw, hits FROM pastes WHERE private = 0 AND (title LIKE ? OR raw LIKE ?) ORDER BY hits DESC, created DESC LIMIT 0,15";
+			}else {
 				$sql = "SELECT id, title, name, created, pid, lang, raw, hits FROM pastes WHERE private = 0 AND (title LIKE ? OR raw LIKE ?) ORDER BY hits DESC, created DESC LIMIT $page,$amount";
 			}
 			$query = $this->db->query($sql, array(
