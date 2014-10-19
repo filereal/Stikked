@@ -72,6 +72,7 @@ Changelog
 * Added mockingjay to word list for unknown posters - let the revolution begin!
 * Bugfixes and improvements
 * Fixed Recent and trending API
+ 
 #### Upgrade instructions
 
 Copy your htdocs/application/stikked.php config file away. Upload the new version. Copy it back.
