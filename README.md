@@ -209,3 +209,7 @@ Get a key from https://www.google.com/recaptcha/admin/create
 * Fully standards compliant css and xhtml.
 * Random generating names for anonymous users
 * Paste downloading
+
+### Wordpress themes
+
+[For Original Free Wordpress themes](https://themepedia.net)
